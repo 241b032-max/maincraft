@@ -1,0 +1,10 @@
+// Week 4: core DAX measures. Update table and column names to match the model.
+Sales = SUM(FactSales[Sales Amount])
+
+Profit = SUM(FactSales[Profit Amount])
+
+Orders = DISTINCTCOUNT(FactSales[Order ID])
+
+Profit Margin = DIVIDE([Profit], [Sales])
+
+Average Order Value = DIVIDE([Sales], [Orders])

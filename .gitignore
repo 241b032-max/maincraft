@@ -1,0 +1,9 @@
+# Keep raw internship data and Power BI workbooks out of version control.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.pbix
+*.pbit
+.DS_Store
+Thumbs.db
