@@ -1,0 +1,8 @@
+// Requires an active relationship between FactSales[Order Date] and DimDate[Date].
+Sales Prior Year = CALCULATE([Sales], SAMEPERIODLASTYEAR(DimDate[Date]))
+
+Sales YoY Variance = [Sales] - [Sales Prior Year]
+
+Sales YoY Growth % = DIVIDE([Sales YoY Variance], [Sales Prior Year])
+
+Sales YTD = TOTALYTD([Sales], DimDate[Date])
